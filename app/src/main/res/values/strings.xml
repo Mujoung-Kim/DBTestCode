@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RoomTestDB</string>
+    <string name="insert">add</string>
+    <string name="name">Input name</string>
+    <string name="content_type">Input type</string>
 </resources>
