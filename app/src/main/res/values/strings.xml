@@ -3,4 +3,5 @@
     <string name="insert">add</string>
     <string name="name">Input name</string>
     <string name="content_type">Input type</string>
+    <string name="update">update</string>
 </resources>

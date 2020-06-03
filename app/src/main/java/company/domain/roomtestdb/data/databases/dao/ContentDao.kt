@@ -15,12 +15,19 @@ interface ContentDao {
     suspend fun insert(contentEntry: ContentEntry)
 
     @Update
-    fun update(contentEntry: ContentEntry)
+    suspend fun update(contentEntry: ContentEntry)
 
     @Delete
     fun delete(contentEntry: ContentEntry)
 
     //  TODO add function in databases query
-    /*@Query("select count(content_id) from Contents")
+    /*@Query("select count(content_number) from Contents")
     fun emptyContents(): LiveData<List<ContentEntry>>*/
+
+//    @Query("select content_number from contents where content_number = 0")
+//    fun increment(contentEntry: ContentEntry)
+
+    @Query("select content_name from Contents")
+    fun extractName(): LiveData<ArrayList<ContentEntry>>
+
 }

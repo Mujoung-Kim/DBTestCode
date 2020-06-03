@@ -6,13 +6,13 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "Schedules")
 data class ScheduleEntry(
+    @PrimaryKey
     @ColumnInfo(name = "schedule_name")
     val name: String,
     @ColumnInfo(name = "schedule_url")
     val url: String
 
 ) {
-    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "schedule_id")
     var id: Int = 0
 

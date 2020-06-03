@@ -14,11 +14,13 @@ interface ScheduleDao {
     suspend fun insert(scheduleEntry: ScheduleEntry)
 
     @Update
-    fun update(scheduleEntry: ScheduleEntry)
+    suspend fun update(scheduleEntry: ScheduleEntry)
 
     @Delete
     fun delete(scheduleEntry: ScheduleEntry)
 
     //  TODO add function in databases query
+    @Query("select schedule_name from Schedules")
+    fun extractName(): LiveData<ArrayList<ScheduleEntry>>
 
 }
